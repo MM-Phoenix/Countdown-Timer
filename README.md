@@ -13,5 +13,3 @@ The benefits of using a timer: <br />
 And more!
 
 New version coming soon! 🥳🥳
-
-Feel free to comment under the code to tell your impressions or any suggestions you may have!
