@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """
 Created on Wed Sep 16 17:39:11 2020
 
@@ -18,9 +20,9 @@ WELCOME = "Welcome to Countdown Timer!"
 DECORATION = "\n" + "*  " * 25 + "\n"
 
 yes = 'yes y ok continue'
-YES = set((yes + yes.upper()).split())
+YES = set((yes + " " + yes.upper()).split())
 no = 'no n nope exit quit'
-NO = set((no + no.upper()).split())
+NO = set((no + " " + no.upper()).split())
 EXIT = ['Thank you!', 'Goodbye!', 'Bye!']
 
 def decorate(x):
@@ -38,13 +40,14 @@ def countdown():
     
     """
     try:
-         t = int(input(ENTER))
+        t = int(float(input(ENTER)))
     except:
         print(WRONG)
         countdown()
     if t < 0:
         print(NEGATIVE)
         countdown()
+    print(DECORATION)
     while t >= 0:
         minute, sec = divmod(t, 60) #seconds to minutes and seconds ex. 90 --> minute = 1, sec = 30
         print(TIME.format(minute, sec), end = '\r') #print time format ex. 04:10. Overwite each line ('\r')
